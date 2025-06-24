@@ -1,5 +1,7 @@
+//João Victor de Oliveira Falcão
+//Questões separadas por função
 
-
+//aplicando prompt-sync
 const { useInsertionEffect } = require('react')
 const prompt = require('prompt-sync')()
 
@@ -142,20 +144,108 @@ function memoize(fn) {
     }
 }
 
-
 //Seção 3: Arrays e Objetos Complexos
 
 //Mapeamento e Ordenação
 function Questão7() {
+    //definindo a array produtos
+    let produtos = [
+        {   nome: 'Tenis',
+            preco: 299.99
+        },{
+            nome: 'Blusa',
+            preco: 49.99
+        },{
+            nome: 'Tablet',
+            preco: 1200
+        },{
+            nome: 'Sandalia',
+            preco: 120
+        },{
+            nome: 'Headset',
+            preco: 499
+        }
+    ]
+    
+    console.table(ordemCrescente())
 
+    //função para retornar os nomes em ordem crescente
+    function ordemCrescente(){
+        const produtosCrescente = produtos.sort((a, b) => a.preco - b.preco)    //criando array em ordem crescente
+        const nomesCrescente = produtosCrescente.map(({ nome }) => ( [nome] ))   //mapeando array apenas com os nomes já em ordem crescente
+        //console.table(produtosCrescente) //poderia retornar o array produtos em ordem crescente tbm
+        return nomesCrescente   //retornando o array com os nomes em ordem
+    }
 }
 
 //Agrupamento por Propriedade
 function Questão8() {
+    let vendas = [
+        {
+            cliente: 'Cleiton',
+            total: 1000000
+        },{
+            cliente: 'Eddie',
+            total: 666
+        },{
+            cliente: 'Jacques',
+            total: 1510
+        },{
+            cliente: 'Brittany',
+            total: 45
+        },{
+            cliente: 'Tiffany',
+            total: 250
+        },{
+            cliente: 'Brittany',
+            total: 200
+        },{
+            cliente: 'Cleiton',
+            total: 12350
+        }
+    ]
 
+    const vendasSomadas = vendas.reduce((Acumulador, instancia) => {
+        Acumulador[instancia.cliente] = (Acumulador[instancia.cliente] || 0) + instancia.total
+        return Acumulador
+    }, [])
+    console.table(vendasSomadas)
 }
 
 //Coversão entre Formatos
 function Questão9() {
+    //criando o array base
+    let arrayPares = []
+    arrayPares['Chave1'] = 1
+    arrayPares['Chave2'] = 2
+    arrayPares['Chave3'] = 3
+    arrayPares['Chave4'] = 4
 
+    //log do array base
+    console.log(arrayPares)
+
+    //função para retornar objeto equivalente
+    function paresParaObjeto(pares) {
+        const objeto = new Object()
+        for(let i in pares) {
+            objeto[i] = pares[i]
+        }
+        return objeto
+    }
+
+    //log do objeto criado com base no array
+    let objetoPares = paresParaObjeto(arrayPares)
+    console.log(objetoPares)
+
+    //função para retornar array pares equivalente
+    function objetoParaPares(obj) {
+        const pares = new Array()
+        for(let i in obj) {
+            pares[i] = obj[i]
+        }
+        return pares
+    }
+
+    //log do array pares criado com base no objeto
+    console.log(objetoParaPares(objetoPares))
 }
