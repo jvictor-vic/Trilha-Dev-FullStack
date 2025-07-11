@@ -1,9 +1,9 @@
 ## Olá, Visitante!
-Bem-vindo ao meu repositório pessoal da Trilha Dev FullStack Jr. [+PraTi](www.maisprati.com.br).
+Bem-vindo ao meu repositório pessoal da Trilha Dev FullStack Jr. [+PraTi](www.maisprati.com.br). <br>
 Aqui estão todas as atividades e estudos específicos que eu fiz durante essa jornada.
 
 ## O que será aprendido?
-Durante o curso serão aprendidas algumas tecnologias são elas
+Durante o curso serão aprendidas algumas tecnologias são elas:
 
 <p align="center">
   <a href="https://skillicons.dev">
