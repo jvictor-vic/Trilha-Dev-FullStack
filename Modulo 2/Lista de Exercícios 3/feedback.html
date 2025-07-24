@@ -4,12 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 3</title>
+    <style>
+        form {
+            margin: auto;
+            align-content: center;
+            text-align: center;
+            padding: 5%;
+            padding-top: 2%;
+            background-color: blanchedalmond;
+            border: 2px dotted darkgray;
+            border-radius: 5px;
+            width: 75vw;
+        }
+
+        h2 {
+            font-size: 160%;
+            color: rgb(60, 0, 128);
+            border-bottom: 2px double rgba(60, 0, 128, 0.61) ;
+        }
+
+        input {
+            width: 60vw;
+            height: 2vh;
+            margin: 2px;
+        }
+
+        select {
+            width: 62vw;
+            height: 2vh;
+            margin: 2px;
+        }
+
+        #descriçao-feedback {
+            width: 60vw;
+            height: 8vh;
+            margin: 2px;
+        }
+
+    </style>
 </head>
 <body>
     <form>
+        <h2>Formulário de Feedback</h2>
         <input type="text" id="nome" placeholder="Nome">
         <br>
-        <input type="text" id="email" placeholder="E-Mail">
+        <input type="email" id="email" placeholder="E-Mail">
         <br>
         <input type="text" id="endereço" placeholder="Endereço">
         <br>
@@ -21,11 +60,9 @@
             <option value="Bug no Site">Bug no Site</option>
         </select>
         <br>
-        <input type="text" id="email" placeholder="E-Mail">
+        <textarea id="descriçao-feedback" placeholder="Descreva aqui o seu Feedback"></textarea>
         <br>
-        <input type="text" id="descriçao-feedback" placeholder="Descreva aqui o feedback">
-        <br>
-        <input type="submit" id="submit">
+        <input type="submit" id="submit" value="Enviar">
     </form>
 </body>
 </html>

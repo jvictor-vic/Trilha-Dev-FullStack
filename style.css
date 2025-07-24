@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5vh ;
+    gap: 5px;
+    grid-template-areas: 
+    "head   head    nav";
+    border: 2px solid black;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40vh 40vh 40vh ;
+    gap: 5px;
+    grid-template-areas: 
+    "about  about   pic"
+    "icons  hab     hab"
+    "proj   proj    gallery";
+    border: 2px solid black;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5vh ;
+    gap: 5px;
+    grid-template-areas: 
+    "contact   contact    footer";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    border: 2px solid black;
+}
+
+#sobre {
+    grid-area: about;
+    border: inherit;
+}
+
+#pic {
+    grid-area: pic;
+    border: inherit;
+}
+
+#icones {
+    grid-area: icons;
+    border: inherit;
+}
+
+#habilidades {
+    grid-area: hab;
+    border: inherit;
+}
+
+#projetos {
+    grid-area: proj;
+    border: inherit;
+}
+
+#galeria-projetos {
+    grid-area: gallery;
+    border: inherit;
+}
