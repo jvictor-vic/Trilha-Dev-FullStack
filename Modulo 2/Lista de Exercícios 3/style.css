@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: black;
+    color: white    ;
+    margin: 0;
+    padding-left: 2vw;
+    padding-bottom: 0.5vh;
+}
+
+header>h1{
+    margin-bottom: 3%;
+}
+
+header>p {
+    margin-top: 0;
+    padding-left: 6vw;
+}
+
+main {
+    margin: 3%;
+    padding: 1%;
+    background-color: bisque;
+    color: black;
+    border: 2px solid black;
+    border-radius: 3%;
+}
+
+footer {
+    border-top: 2px solid black;
+    padding: 0;
+    padding-right: 5px;
+}
+
+footer>p {
+    font-size: 75%;
+    position: relative;
+    padding-right: 29%;
+    left: 30%;
+    bottom: 10px;
+}
+
+h2 {
+    font-size: 190%;
+    text-decoration: underline;
+}
+
+.destaque {
+    font-style: italic;
+    background-color: yellow;
+}
+
+#importante {
+    border-top: 4px solid black;
+}
