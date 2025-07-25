@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid e FlexBox</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap row;
+            padding: 1%;
+        }
+
+        .gallery {
+            width: 90vw;
+            height: 90vh;
+            gap: 1%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+        }
+
+        .display {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 5% ;
+            background-color: whitesmoke;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 90%;
+        }
+
+
+        @media (max-width: 720px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="gallery">
+            <div id="img1" class="display">
+                <a href="https://www.behance.net/gallery/11253969/The-Lord-of-the-Rings/modules/82132033">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/82e71511253969.560f6410312e2.jpg"
+                        alt="The Witch King">
+                </a>
+                <br>
+                <h2>The Witch King</h2>
+            </div>
+            <div id="img2" class="display">
+                <a href="https://www.behance.net/gallery/11253969/The-Lord-of-the-Rings/modules/82132029">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a5f10411253969.560f658906cdb.jpg"
+                        alt="TThe Dark Lord">
+                </a>
+                <h2>The Dark Lord</h2>
+            </div>
+            <div id="img3" class="display">
+                <a href="https://www.behance.net/gallery/11253969/The-Lord-of-the-Rings/modules/82132025">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ca4ae411253969.560f64435bc06.jpg"
+                        alt="he Nazgûl">
+                </a>
+                <h2>The Nazgûl</h2>
+            </div>
+            <div id="img4" class="display">
+                <a href="https://www.behance.net/gallery/11253969/The-Lord-of-the-Rings/modules/81514507">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/0d68cc11253969.560f4a15e79a9.jpg"
+                        alt="The Fellowship of the Ring">
+                </a>
+                <h2>The Fellowship of the Ring</h2>
+            </div>
+            <div id="img5" class="display">
+                <a href="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f8382f11253969.560f4bff608ec.jpg">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f8382f11253969.560f4bff608ec.jpg"
+                        alt="The Two Towers">
+                </a>
+                <h2>The Two Towers</h2>
+            </div>
+            <div id="img6" class="display">
+                <a href="https://www.behance.net/gallery/11253969/The-Lord-of-the-Rings/modules/81514511">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ab1b8f11253969.560f4a552d208.jpg"
+                        alt="The Return of the King">
+                </a>
+                <h2>The Return of the King</h2>
+            </div>
+            <div id="img7" class="display">
+                <a href="https://www.behance.net/gallery/86725627/Batman-Noir/modules/501802733">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/4d06df86725627.5da2574e13dea.jpg"
+                        alt="Joker">
+                </a>
+                <h2>The Joker</h2>
+            </div>
+            <div id="img8" class="display">
+                <a href="https://www.behance.net/gallery/86725627/Batman-Noir/modules/501802735">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/d2918286725627.5da2574e14468.jpg"
+                        alt="Batman-Noir">
+                </a>
+                <h2>Batman</h2>
+            </div>
+            <div id="img9" class="display">
+                <a href="https://www.behance.net/gallery/86725627/Batman-Noir/modules/501802731">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/951ee286725627.5da2574e1339c.jpg"
+                        alt="The Penguin">
+                </a>
+                <h2>The Penguin</h2>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
