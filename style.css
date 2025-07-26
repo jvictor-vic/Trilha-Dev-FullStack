@@ -1,67 +1,537 @@
-body {
-    margin: 0;
-}
+    * {
+      box-sizing: border-box;
+      font-size: 16px;
+    }
 
-.header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5vh ;
-    gap: 5px;
-    grid-template-areas: 
-    "head   head    nav";
-    border: 2px solid black;
-}
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40vh 40vh 40vh ;
-    gap: 5px;
-    grid-template-areas: 
-    "about  about   pic"
-    "icons  hab     hab"
-    "proj   proj    gallery";
-    border: 2px solid black;
-}
-.footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5vh ;
-    gap: 5px;
-    grid-template-areas: 
-    "contact   contact    footer";
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    border: 2px solid black;
-}
+    :root {
+      --background-primario: #222831;
+      --cor-secundaria: #393E46;
+      --accent-color: #7971EA;
+      --text-color: #EEEEEE;
+      --background-header-footer: rgb(24, 24, 24);
+    }
 
-#sobre {
-    grid-area: about;
-    border: inherit;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-primario);
+    }
 
-#pic {
-    grid-area: pic;
-    border: inherit;
-}
+    .header-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 5vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 7vh;
+      gap: 5px;
+      grid-template-areas:
+        "head   head    nav";
+      background-color: var(--background-header-footer);
+    }
 
-#icones {
-    grid-area: icons;
-    border: inherit;
-}
+    .menu-seleção {
+      grid-area: nav;
+    }
 
-#habilidades {
-    grid-area: hab;
-    border: inherit;
-}
+    .container {
+      background-color: var(--background-primario);
+      padding: 5%;
+    }
 
-#projetos {
-    grid-area: proj;
-    border: inherit;
-}
+    .container2 {
+      background-color: var(--background-secundário);
+      padding: 5%;
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      align-items: center;
+    }
 
-#galeria-projetos {
-    grid-area: gallery;
-    border: inherit;
-}
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 30vh 40vh 40vh 40vh 5vh;
+      gap: 0;
+      grid-template-areas:
+        "intro  intro   intro"
+        "about  about   pic"
+        "icons  hab     hab"
+        "proj   proj    gallery";
+
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 5vh;
+      gap: 5px;
+      grid-template-areas:
+        "footer contact";
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      background-color: var(--background-header-footer);
+    }
+
+    .menu-seleção>ul {
+      list-style-type: none;
+      margin: 0;
+      margin-right: 5px;
+      padding: 0;
+      display: flex;
+      height: 5vh;
+
+    }
+
+    .menu-seleção>ul>li {
+      display: inline-block;
+      border-left: 2px solid var(--background-primario);
+    }
+
+    li a {
+      font-family: "Ubuntu", sans-serif;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-color);
+      padding: 14px 16px;
+    }
+
+    li a:hover {
+      background-color: var(--accent-color);
+    }
+
+    .copy {
+      grid-area: footer;
+      display: inline;
+      text-align: left;
+      align-self: center;
+    }
+
+    .copy>p {
+      font-size: 0.6rem;
+    }
+
+    .menu-contato {
+      grid-area: contact;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .menu-contato>a>img {
+      height: 3vh;
+    }
+
+    section {
+      display: flex;
+      flex-flow: wrap column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #intro {
+      grid-area: intro;
+      display: flex;
+    }
+
+    #sobre {
+      grid-area: about;
+    }
+
+    #pic {
+      grid-area: pic;
+    }
+
+    #icones {
+      grid-area: icons;
+    }
+
+    #habilidades {
+      grid-area: hab;
+    }
+
+    #projetos {
+      grid-area: proj;
+    }
+
+    #galeria-projetos {
+      grid-area: gallery;
+    }
+
+    span {
+      font-size: inherit;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      font-family: Lato, sans-serif;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 300;
+      font-style: light;
+      font-size: 1rem;
+      text-indent: 5%;
+      color: var(--text-color);
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    #eu {
+      width: 100%;
+      border: 5px solid var(--cor-secundaria);
+      border-radius: 10px;
+    }
+
+    /* Typewriter effect 1 */
+    /* por https://codepen.io/alvaromontoro/pen/rNwVpdd */
+    @keyframes typing {
+
+      0.0000%,
+      20% {
+        content: "";
+      }
+
+      0.75%,
+      19.5% {
+        content: "J";
+      }
+
+      1.5%,
+      19% {
+        content: "Jo";
+      }
+
+      2.25%,
+      18.5% {
+        content: "Joã";
+      }
+
+      3%,
+      18% {
+        content: "João";
+      }
+
+      3.75%,
+      17.5% {
+        content: "João V";
+      }
+
+      4.5%,
+      17% {
+        content: "João Vi";
+      }
+
+      6.25%,
+      16.5% {
+        content: "João Vic";
+      }
+
+      8%,
+      16% {
+        content: "João Vict";
+      }
+
+      8.75%,
+      15.5% {
+        content: "João Victo";
+      }
+
+      9.5%,
+      15% {
+        content: "João Victor";
+      }
+
+      20%,
+      40% {
+        content: "";
+      }
+
+      20.681%,
+      39.310% {
+        content: "i";
+      }
+
+      21.362%,
+      38.629% {
+        content: "id";
+      }
+
+      22.043%,
+      37.948% {
+        content: "ide";
+      }
+
+      22.724%,
+      37.267% {
+        content: "idea";
+      }
+
+      23.405%,
+      36.586% {
+        content: "ideal";
+      }
+
+      24.086%,
+      35.905% {
+        content: "ideali";
+      }
+
+      24.767%,
+      35.224% {
+        content: "idealiz";
+      }
+
+      25.448%,
+      34.543% {
+        content: "idealiza";
+      }
+
+      26.129%,
+      33.862% {
+        content: "idealizad";
+      }
+
+      26.81%,
+      33.181% {
+        content: "idealizado";
+      }
+
+      27.491%,
+      32.5% {
+        content: "idealizador";
+      }
+
+      40%,
+      60% {
+        content: "";
+      }
+
+      40%,
+      58.819% {
+        content: "d";
+      }
+
+      40.563%,
+      58.693% {
+        content: "de";
+      }
+
+      41.126%,
+      58.130% {
+        content: "des";
+      }
+
+      41.689%,
+      57.567% {
+        content: "dese";
+      }
+
+      42.252%,
+      57.004% {
+        content: "desen";
+      }
+
+      42.815%,
+      56.441% {
+        content: "desenv";
+      }
+
+      43.378%,
+      55.878% {
+        content: "desenvo";
+      }
+
+      43.941%,
+      55.315% {
+        content: "desenvol";
+      }
+
+      44.505%,
+      54.752% {
+        content: "desenvolv";
+      }
+
+      45.067%,
+      54.189% {
+        content: "desenvolve";
+      }
+
+      45.630%,
+      53.626% {
+        content: "desenvolved";
+      }
+
+      46.193%,
+      53.063% {
+        content: "desenvolvedo";
+      }
+
+      46.756%,
+      52.5% {
+        content: "desenvolvedor";
+      }
+
+      60%,
+      80% {
+        content: "";
+      }
+
+      61.5%,
+      78.5% {
+        content: "g";
+      }
+
+      63%,
+      77% {
+        content: "ge";
+      }
+
+      64.5%,
+      75.5% {
+        content: "ges";
+      }
+
+      66%,
+      74% {
+        content: "gest";
+      }
+
+      67.5%,
+      72.5% {
+        content: "gestor";
+      }
+
+      80%,
+      100% {
+        content: "";
+      }
+
+      80.937%,
+      99.063% {
+        content: "i";
+      }
+
+      81.875%,
+      98.125% {
+        content: "in";
+      }
+
+      82.812%,
+      97.188% {
+        content: "ino";
+      }
+
+      83.75%,
+      96.25% {
+        content: "inov";
+      }
+
+      84.687%,
+      95.313% {
+        content: "inova";
+      }
+
+      85.625%,
+      94.375% {
+        content: "inovad";
+      }
+
+      86.563%,
+      93.437% {
+        content: "inovado";
+      }
+
+      87.5%,
+      92.5% {
+        content: "inovador";
+      }
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .typewriter {
+      --caret: currentcolor;
+    }
+
+    .typewriter::before {
+      content: "";
+      animation: typing 13.5s infinite;
+    }
+
+    .typewriter::after {
+      content: "";
+      border-right: 1px solid var(--caret);
+      animation: blink 0.5s linear infinite;
+    }
+
+    .typewriter.thick::after {
+      border-right: 1ch solid var(--caret);
+    }
+
+    .typewriter.nocaret::after {
+      border-right: 0;
+    }
+
+
+    @media (prefers-reduced-motion) {
+      .typewriter::after {
+        animation: none;
+      }
+
+      @keyframes sequencePopup {
+
+        0% {
+          content: "João Victor";
+        }
+
+        20% {
+          content: "idealizador";
+        }
+
+        40% {
+          content: "desenvolvedor";
+        }
+
+        80% {
+          content: "gestor";
+        }
+
+        10% {
+          content: "inovador";
+        }
+      }
+
+      .typewriter::before {
+        content: "developer";
+        animation: sequencePopup 12s linear infinite;
+      }
+    }
