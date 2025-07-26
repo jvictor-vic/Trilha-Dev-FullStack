@@ -201,6 +201,22 @@
       border-radius: 10px;
     }
 
+    @media (max-width: 580px) {
+      main {
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: 
+        "intro"
+        "about"
+        "pic"
+        "hab"
+        "icons"
+        "proj"
+        "gallery";
+      }
+    }
+
+
     /* Typewriter effect 1 */
     /* por https://codepen.io/alvaromontoro/pen/rNwVpdd */
     @keyframes typing {
