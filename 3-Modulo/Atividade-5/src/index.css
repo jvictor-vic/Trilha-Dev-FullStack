@@ -1,68 +1,193 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+#root {
+    --black: #000;
+    --white: #fff;
+    --dark: #211832;
+    --primary: #F25912;
+    --secondary: #5C3E94;
+    --washed: #412B6B;
+    --washed_opaque: rgba(65, 43, 107, 0.5);
+
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'aoboshi-one-regular', serif;
+    font-weight: 450;
+    font-style: normal;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+main {
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h1,
+h2,
+h3 {
+    color: #F25912;
+    text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+input[type="text"] {
+    color: var(--primary);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.page-button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--dark);
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Header-Container {
+    background-color: var(--washed);
+    box-shadow: 0px -10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+#moviesearch-box {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+
+#search-container {
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#search-query {
+    width: 70%;
+    aspect-ratio: 18/1;
+    min-height: 28px;
+    max-height: 42px;
+    padding: 10px;
+    background-color: var(--black);
+}
+
+#movies-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+#movie-card {
+    list-style: none;
+    padding: 15px;
+    background-color: var(--washed_opaque);
+    flex-basis: 360px;
+    flex-grow: 1;
+    min-width: 0px;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#movie-poster {
+    min-width: 240px;
+    max-width: 360px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
+    cursor: crosshair;
+}
+
+#movie-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details-button {
+    width: 40px;
+    height: 40px;
+}
+
+#page-counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+#page-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: var(--primary);
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+#modal-title {
+    color: var(--black);
+}
+
+#cast-list>li {
+    list-style-type: square;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+}
+
+#favorite {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
 }
