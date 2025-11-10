@@ -1,0 +1,34 @@
+:root {
+    --bg: #FCF9EA;
+    --fg: #A18D6D;
+    --text-color: #000000;
+    --primary: #FFA4A4;
+    --washed: #FFBDBD;
+    --secondary: #BADFDB;
+    --space-2: 8px;
+    --space-3: 14px;
+}
+
+[data-theme="dark"] {
+    --fg: #FCF9EA;
+    --bg: #A18D6D;
+    --text-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+    font-family: sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
