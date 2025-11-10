@@ -1,0 +1,1 @@
+Exercicios separados em pacotes diferentes resoluções na main de cada pacote.
